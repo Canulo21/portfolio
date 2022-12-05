@@ -7,6 +7,7 @@ import ReactTooltip from "react-tooltip";
 import Services from "./components/Services";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
@@ -115,7 +116,9 @@ function App() {
           <Skills></Skills>
         </section>
         <section id="projects"></section>
-        <section id="contacts"></section>
+        <section id="contacts">
+          <Contacts></Contacts>
+        </section>
       </div>
     </div>
   );

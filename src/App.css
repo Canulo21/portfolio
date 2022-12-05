@@ -535,7 +535,8 @@ body {
 
 /* skills-container */
 .skills-wrapper,
-.service-wrap {
+.service-wrap,
+.contacts-wrapper {
   position: relative;
   background: url("./assets/img/den-nyeste-pattern-min.webp");
 }
@@ -659,4 +660,112 @@ body {
 }
 .box:last-child .holder-container .holder:hover:last-child {
   background: #450135;
+}
+
+/* contact-container */
+.contacts-container {
+  display: table;
+  margin: auto;
+  padding: 5rem 4rem 5rem;
+  background: #1f2024;
+  border-radius: 25px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.group input,
+textarea {
+  font-size: 1rem;
+  padding: 10px 15px;
+  width: 800px !important;
+  height: 30px;
+}
+.group {
+  position: relative;
+}
+.group + .group {
+  margin-top: 15px;
+}
+.group label {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  top: 0;
+  left: 15px;
+  margin: auto;
+  display: table;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+.group:last-child {
+  display: flex;
+  justify-content: center;
+}
+.group :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.7);
+  margin: 0em;
+  margin-left: 1.1em;
+  padding: 0.4em;
+  background-color: #1f2024;
+  color: #fff;
+}
+.group :is(textarea:focus, textarea:valid) ~ label {
+  transform: translateY(-50%) scale(0.7);
+  margin: 0em;
+  margin-left: 1.1em;
+  padding: 0.4em;
+  background-color: #1f2024;
+  color: #fff;
 }
